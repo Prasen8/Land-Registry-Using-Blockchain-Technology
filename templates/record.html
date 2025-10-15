@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Record Found</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        text-align: center;
+      }
+      .record-container {
+        margin: 50px auto;
+        padding: 20px;
+        width: 60%;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      h1 {
+        color: #333;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: left;
+      }
+      li {
+        background-color: #eee;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      li strong {
+        display: inline-block;
+        width: 150px;
+      }
+      pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="record-container">
+      <h1>Record Details</h1>
+      {% if record %}
+      <ul>
+        <li><strong>Timestamp:</strong> {{ record.timestamp }}</li>
+        <li><strong>Name:</strong> {{ record.name }}</li>
+        <li><strong>Age:</strong> {{ record.age }}</li>
+        <li><strong>UID:</strong> {{ record.uid }}</li>
+        <li><strong>Land History:</strong> <pre>{{ record.land }}</pre></li>
+        <li><strong>Hash:</strong> <pre>{{ record.hash }}</pre></li>
+        <li><strong>Previous Hash:</strong> <pre>{{ record.previous_hash }}</pre></li>
+      </ul>
+      {% else %}
+      <p>No record found for this UID.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
