@@ -47,6 +47,5 @@ JSON	Local persistent data storage
 
 
 
-# 👨‍💻 Author
 # Prasen Nimje
 # 🚀 Final Year AI & DS Student 
