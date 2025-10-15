@@ -45,6 +45,28 @@ hashlib	Implements SHA-256 cryptographic hashing
 HTML/CSS	Frontend structure and styling
 JSON	Local persistent data storage
 
+# 🔐 How SHA-256 Ensures Data Integrity :
+
+In this project, every land record is stored as a block that contains details like owner name, land ID, and timestamp.
+To make sure the data inside each block cannot be tampered with, I’ve implemented SHA-256 cryptographic hashing.
+
+🧩 How It Works:
+
+When a new block is created, all its data (like land details + timestamp + previous block hash) is passed through the SHA-256 algorithm.
+
+This algorithm converts the input data into a unique 64-character hash (a digital fingerprint).
+
+Even the smallest change in the block’s data (like a single character) will completely change the hash value.
+
+Each block also stores the hash of the previous block, creating a linked chain.
+
+If anyone tries to modify a past record, the hashes break the chain — instantly revealing tampering.
+
+# 🧠 Why It’s Important:
+✅ Maintains data integrity — once recorded, data cannot be altered.
+✅ Makes the system transparent and trustworthy without needing a central authority.
+✅ Acts as a digital signature for each block, securing land ownership records permanently.
+
 
 
 # Prasen Nimje
